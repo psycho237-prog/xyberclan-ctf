@@ -12,7 +12,7 @@ export default function ClientSearch() {
         setLoading(true);
         setError(null);
         try {
-            const resp = await fetch(`http://localhost:5000/api/search-clients?name=${query}`);
+            const resp = await fetch(`/api/search-clients?name=${encodeURIComponent(query)}`);
             const data = await resp.json();
             if (!resp.ok) {
                 throw new Error(data.error || 'Server error');
