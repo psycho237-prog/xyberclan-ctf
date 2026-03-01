@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import SecretPanel from './components/SecretPanel';
+import ClientSearch from './components/ClientSearch';
 
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <ClientSearch />
     </>
   );
 }
